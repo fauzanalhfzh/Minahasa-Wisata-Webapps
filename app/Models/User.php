@@ -19,10 +19,17 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    public function posts()
-    {
-        return $this->hasMany(Post::class);
-    }
+    const ROLE_ADMIN = "ADMIN";
+
+    const ROLE_EDITOR = "EDITOR";
+
+    const ROLE_USER = "USER";
+
+    const ROLES = [
+        self::ROLE_ADMIN => 'Admin',
+        self::ROLE_EDITOR => 'Editor',
+        self::ROLE_USER => 'User',
+    ];
 
     /**
      * The attributes that are mass assignable.
@@ -33,6 +40,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -64,6 +72,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 
     public function likes()
     {
