@@ -9,7 +9,13 @@
                     {{ __('Home') }}
                 </x-nav-link>
                 <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.index')">
-                    {{ __('Wisata') }}
+                    {{ __('Daftar Wisata') }}
+                </x-nav-link>
+                <x-nav-link href="#">
+                    {{ __('Ekraf') }}
+                </x-nav-link>
+                <x-nav-link href="#">
+                    {{ __('Kinerja') }}
                 </x-nav-link>
             </div>
         </div>
