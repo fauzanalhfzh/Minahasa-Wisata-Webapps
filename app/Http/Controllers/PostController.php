@@ -12,25 +12,18 @@ class PostController extends Controller
     public function index()
     {
         $categories = Cache::remember('categories', Carbon::now()->addDays(3), function () {
-            return Category::whereHas('posts', function ($query) {
-                $query->published();
-            })
-            ->take(10)->get();
+            return Category::all();
         });
 
         return view('posts.index', [
-            'categories' => $categories
+            'categories' => $categories,
         ]);
     }
 
     public function show(Post $post)
     {
-        return view(
-            'posts.show',
-            [
-                'post' => $post
-            ]
-
-        );
+        return view('posts.show', [
+            'post' => $post,
+        ]);
     }
 }

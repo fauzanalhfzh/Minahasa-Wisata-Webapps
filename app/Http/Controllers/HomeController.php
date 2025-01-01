@@ -14,16 +14,44 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $featuredPosts = Cache::remember('featuredPosts', Carbon::now()->addDay(), function () {
-            return Post::published()->featured()->with('categories')->latest('published_at')->take(3)->get();
+        $alamPosts = Cache::remember('alamPosts', Carbon::now()->addDay(), function () {
+            return Post::published()
+                ->featured()
+                ->whereHas('categories', function ($query) {
+                    $query->where('title', 'alam');
+                })
+                ->with('categories')
+                ->latest('published_at')
+                ->take(3)
+                ->get();
         });
-        $latestPosts = Cache::remember('latestPosts', Carbon::now()->addDay(), function () {
-            return Post::published()->with('categories')->latest('published_at')->take(9)->get();
+        $buatanPosts = Cache::remember('buatanPosts', Carbon::now()->addDay(), function () {
+            return Post::published()
+                ->featured()
+                ->whereHas('categories', function ($query) {
+                    $query->where('title', 'buatan');
+                })
+                ->with('categories')
+                ->latest('published_at')
+                ->take(3)
+                ->get();
+        });
+        $budayaPosts = Cache::remember('budayaPosts', Carbon::now()->addDay(), function () {
+            return Post::published()
+                ->featured()
+                ->whereHas('categories', function ($query) {
+                    $query->where('title', 'budaya');
+                })
+                ->with('categories')
+                ->latest('published_at')
+                ->take(3)
+                ->get();
         });
 
         return view('home', [
-            'featuredPosts' => $featuredPosts,
-            'latestPosts' => $latestPosts
+            'alamPosts' => $alamPosts,
+            'buatanPosts' => $buatanPosts,
+            'budayaPosts' => $budayaPosts
         ]);
     }
 }

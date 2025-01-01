@@ -3,18 +3,18 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfilController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/storage-link', function(){
+    Artisan::call('storage:link');
+    return "Storage linked successfully";
+});
+
+Route::get('/clear', function(){
+    Artisan::call('cache:clear');
+    return "Cache clear";
+});
 
 Route::get('/', HomeController::class)->name('home');
 

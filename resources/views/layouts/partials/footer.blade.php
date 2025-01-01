@@ -9,15 +9,15 @@
           <div class="flex flex-col gap-5">
             <h4 class="text-[18px] font-[700] whitespace-nowrap">Menu</h4>
             <ul class="text-[14px] font-[400] flex flex-col gap-4 text-gray-30">
-                <a href="/" >
-                  Beranda
-                </a>
-                <a href="/" >
-                  Tentang Kami
-                </a>
-                <a href="/" >
-                  Destinasi
-                </a>
+                <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    {{ __('Home') }}
+                </x-nav-link>
+                <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.index')">
+                    {{ __('Daftar Wisata') }}
+                </x-nav-link>
+                <x-nav-link href="{{ route('profil') }}" :active="request()->routeIs('profil')" >
+                    {{ __('Profil') }}
+                </x-nav-link>
             </ul>
           </div>
 
@@ -78,6 +78,6 @@
       </div>
 
       <div class="border bg-gray-20"></div>
-      <p class="text-[14px] w-full text-center text-gray-30">2024 Minahasa | All rights reserved</p>
+      <p class="text-[14px] w-full text-center text-gray-30">2025 Minahasa | All rights reserved</p>
     </div>
   </footer>

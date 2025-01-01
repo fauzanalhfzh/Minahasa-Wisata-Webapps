@@ -2,7 +2,7 @@
     @section('hero')
         <div class="relative overflow-hidden">
             <section
-                class="mx-auto max-w-screen-3xl px-6 lg:px-0 3xl:px-0 flex flex-col justify-between gap-20 py-10 pb-32 md:gap-28 lg:py-4 xl:flex-row">
+                class="mx-auto max-w-screen-3xl px-6 lg:px-0 3xl:px-0 flex flex-col justify-between py-10 pb-32 md:gap-28 lg:py-4 xl:flex-row">
                 <div class="relative z-20 flex justify-center items-end flex-col xl:w-1/2 text-right">
                     <h1 class="text-[52px] font-[700] leading-[120%] lg:text-[48px]  lg:font-[700] lg:leading-[120%] text-right">Selamat Datang di</h1>
                     <h1 class="text-[52px] font-[700] leading-[120%] lg:text-[92px]  lg:font-[700] lg:leading-[120%] text-green-50">MINAHASA</h1>
@@ -126,28 +126,39 @@
 
     <div class="mb-10 w-full">
         <div class="mb-16">
-            <h2 class="mt-16 mb-5 text-3xl text-green-500 font-bold">Kabar Terbaru</h2>
+            <h2 class="mt-16 mb-5 text-3xl text-green-500 font-bold">Wisata Alam Terbaru</h2>
             <div class="w-full">
                 <div class="grid grid-cols-3 gap-10 w-full">
-                    @foreach ($featuredPosts as $post)
+                    @foreach ($alamPosts as $post)
                         <x-posts.post-card class="md:col-span-1 col-span-3" :post="$post" />
                     @endforeach
                 </div>
             </div>
             <a class="mt-10 block text-center text-lg text-green-500 font-semibold"
-                href="{{ route('posts.index') }}">Berita Lainnya</a>
+                href="{{ route('posts.index') }}">Wisata Lainnya</a>
         </div>
         <hr>
 
-        <h2 class="mt-16 mb-5 text-3xl text-green-500 font-bold">Berita Lainnya</h2>
-        <div class="w-full mb-5">
+        <div class="mb-16">
+            <h2 class="mt-16 mb-5 text-3xl text-green-500 font-bold">Wisata Buatan Terbaru</h2>
             <div class="grid grid-cols-3 gap-10 w-full">
-                @foreach ($latestPosts as $post)
+                @foreach ($buatanPosts as $post)
                     <x-posts.post-card class="md:col-span-1 col-span-3" :post="$post" />
                 @endforeach
             </div>
+            <a class="mt-10 block text-center text-lg text-green-500 font-semibold"
+                href="{{ route('posts.index') }}">Wisata lainnya</a>
         </div>
-        <a class="mt-10 block text-center text-lg text-green-500 font-semibold"
-            href="{{ route('posts.index') }}">Jelajahi Lebih Banyak</a>
+
+        <div class="mb-16">
+            <h2 class="mt-16 mb-5 text-3xl text-green-500 font-bold">Wisata Budaya Terbaru</h2>
+            <div class="grid grid-cols-3 gap-10 w-full">
+                @foreach ($budayaPosts as $post)
+                    <x-posts.post-card class="md:col-span-1 col-span-3" :post="$post" />
+                @endforeach
+            </div>
+            <a class="mt-10 block text-center text-lg text-green-500 font-semibold"
+                href="{{ route('posts.index') }}">Wisata lainnya</a>
+        </div>
     </div>
 </x-app-layout>
