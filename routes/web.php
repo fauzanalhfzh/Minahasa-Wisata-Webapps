@@ -11,8 +11,18 @@ Route::get('/storage-link', function(){
     return "Storage linked successfully";
 });
 
-Route::get('/clear', function(){
+Route::get('/clear-cache', function(){
     Artisan::call('cache:clear');
+    return "Cache clear";
+});
+
+Route::get('/clear-config', function(){
+    Artisan::call('config:clear');
+    return "Cache clear";
+});
+
+Route::get('/clear-view', function(){
+    Artisan::call('view:clear');
     return "Cache clear";
 });
 
