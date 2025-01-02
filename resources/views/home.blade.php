@@ -2,11 +2,14 @@
     @section('hero')
         <div class="relative overflow-hidden">
             <section
-                class="mx-auto max-w-screen-3xl px-6 lg:px-0 3xl:px-0 flex flex-col justify-between py-10 pb-32 md:gap-28 lg:py-4 xl:flex-row">
-                <div class="relative z-20 flex justify-center items-end flex-col xl:w-1/2 text-right">
-                    <h1 class="text-[52px] font-[700] leading-[120%] lg:text-[48px]  lg:font-[700] lg:leading-[120%] text-right">Selamat Datang di</h1>
-                    <h1 class="text-[52px] font-[700] leading-[120%] lg:text-[92px]  lg:font-[700] lg:leading-[120%] text-green-50">MINAHASA</h1>
-                    <p class="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
+                class="mx-auto max-w-screen-3xl px-6 lg:px-0 xl:px-32 flex flex-col justify-center py-10 pb-32 md:gap-14 lg:pt-24 xl:flex-row">
+                <div class="relative z-20 flex justify-center items-start flex-col xl:w-1/2 text-right">
+                    <h1 class="text-[52px] font-[700] leading-[120%] lg:text-[48px]  lg:font-[700] lg:leading-[120%]">
+                        Selamat Datang di</h1>
+                    <h1
+                        class="text-[52px] font-[700] leading-[120%] lg:text-[92px]  lg:font-[700] lg:leading-[120%] text-green-50">
+                        MINAHASA</h1>
+                    <p class="regular-16 mt-6 text-gray-30 text-left xl:max-w-[520px]">
                         surga tersembunyi di Sulawesi Utara yang menawarkan keindahan alam,
                         budaya kaya, dan pengalaman tak terlupakan.
                         Temukan keajaiban Danau Tondano, cita rasa khas Minahasa, serta keramahan penduduk lokal yang akan
@@ -19,30 +22,27 @@
                         </x-nav-link>
                     </div>
                 </div>
-                <img src="assets/tondano.jpg" class="bg-cover bg-center rounded-[40px]" />
+                <img src="assets/tondano.jpg" class="bg-cover bg-center rounded-[40px]" width="800" />
             </section>
 
-            <section class="flex justify-center items-center flex-col py-24">
-                <div class="mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 w-full pb-24">
+            <section
+                class="mx-auto max-w-screen-3xl px-6 lg:px-0 xl:px-32 flex flex-col justify-center py-10 pb-32 md:gap-28 lg:pt-32 lg:pb-16 xl:flex-row">
+                <img src="assets/tari.jpg" alt="tari" width="700" class="bg-cover bg-center rounded-[40px]" />
+                <div class="relative z-20 flex justify-center items-start flex-col xl:w-1/2 text-right">
                     <p class="uppercase text-[18px] -mt-1 mb-3 text-green-50">
                         We are here for you
                     </p>
-                    <div class="flex flex-wrap justify-between gap-5 lg:gap-10">
-                        <h2 class="text-[40px] font-[400] leading-[120%] lg:text-[64px] lg:font-[700] xl:max-w-[390px]">
-                            Budaya Menarik</h2>
-                        <p class="text-[16px] text-gray-30 xl:max-w-[520px]">Jelajahi kekayaan budaya Minahasa yang penuh
-                            warna dan makna.
-                            Saksikan <strong>tarian tradisional Maengket</strong>, yang menggambarkan kehidupan masyarakat
-                            setempat, dan kunjungi situs-situs bersejarah yang menceritakan warisan nenek moyang.
-                            Temui keramahan penduduk lokal yang dengan senang hati membagikan cerita dan tradisi mereka,
-                            menjadikan kunjungan Anda lebih bermakna.</p>
-                    </div>
+                    <h2 class="text-[52px] font-[700] leading-[120%] lg:text-[48px]  lg:font-[700] lg:leading-[120%]">
+                        Budaya Menarik</h2>
+                    <p class="text-[16px] text-left text-gray-30 xl:max-w-[520px]">Jelajahi kekayaan budaya Minahasa yang
+                        penuh
+                        warna dan makna.
+                        Saksikan <strong>tarian tradisional Maengket</strong>, yang menggambarkan kehidupan masyarakat
+                        setempat, dan kunjungi situs-situs bersejarah yang menceritakan warisan nenek moyang.
+                        Temui keramahan penduduk lokal yang dengan senang hati membagikan cerita dan tradisi mereka,
+                        menjadikan kunjungan Anda lebih bermakna.</p>
                 </div>
 
-                <div class="flex justify-center items-center mx-auto max-w-[1440px] relative w-full">
-                    <img src="assets/tari.jpg" alt="tari" width="1440" height="580"
-                        class="w-full object-cover object-center lg:rounded-5xl" />
-                </div>
             </section>
 
             <section class="flex justify-center items-center flex-col py-24">
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="z-20 flex w-full flex-col lg:w-[60%]">
-                    <ul class="mt-10 grid gap-10 md:grid-cols-3 lg:mg-20 lg:gap-12">
+                    <ul class="mt-10 grid gap-10 md:grid-cols-3 lg:mt-2 lg:gap-12">
                         <div
                             class="w-full max-w-sm h-[300px] flex justify-center items-center bg-white border border-gray-200 rounded-lg shadow ">
                             <div class="flex flex-col items-center pb-10">
@@ -100,9 +100,11 @@
                     <p class="uppercase text-[18px] font-[400] -mt-1 mb-3 text-green-50">
                         Our Destination
                     </p>
-                    <div class="flex justify-between gap-5 lg:gap-10">
-                        <div class="">
-                            <h2 class="text-[40px] font-[700] lg:text-[64px] xl:max-w-[1000px]">Destinasi Menarik</h2>
+                    <div class="flex justify-between items-center gap-5 lg:gap-10">
+                        <div>
+                            <h2
+                                class="text-[52px] font-[700] leading-[120%] lg:text-[48px]  lg:font-[700] lg:leading-[120%]">
+                                Destinasi Menarik</h2>
                             </h2>
                             <div class="pt-4">
                                 <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.index')"
