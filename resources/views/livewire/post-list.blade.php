@@ -33,7 +33,7 @@
         @endforeach
     </div>
 
-    <div class="my-3">
+    <div class="my-3 bg-white text-black dark:bg-white dark:text-black">
         {{ $this->posts->onEachSide(1)->links() }}
     </div>
 </div>
