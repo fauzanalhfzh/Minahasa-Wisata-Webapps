@@ -2,7 +2,7 @@
     <h2 class="text-2xl font-semibold text-gray-900 mb-5">Discussions</h2>
     @auth
         <textarea wire:model="comment"
-            class="w-full rounded-lg p-4 bg-gray-50 focus:outline-none text-sm text-gray-700 border-gray-200 placeholder:text-gray-400"
+            class="w-full rounded-lg p-4 bg-slate-200 focus:outline-none text-sm text-gray-700 border-gray-200 placeholder:text-gray-400"
             cols="30" rows="7"></textarea>
         <button
             wire:click="postComment"
