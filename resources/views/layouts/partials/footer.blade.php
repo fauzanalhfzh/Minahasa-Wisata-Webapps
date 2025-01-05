@@ -64,13 +64,13 @@
             <h4 class="text-[18px] font-[700] whitespace-nowrap">Socials</h4>
             <ul class="text-[14px] font-[400] flex gap-4 text-gray-30">
                 <a href="/" >
-                  <img src="assets/facebook.svg" alt="Logo" width="24" height="24">
+                  <img src="/assets/facebook.svg" alt="Logo" width="24" height="24">
                 </a>
                 <a href="/" >
-                  <img src="assets/twitter.svg" alt="Logo" width="24" height="24">
+                  <img src="/assets/twitter.svg" alt="Logo" width="24" height="24">
                 </a>
                 <a href="/" >
-                  <img src="assets/youtube.svg" alt="Logo" width="24" height="24">
+                  <img src="/assets/youtube.svg" alt="Logo" width="24" height="24">
                 </a>
             </ul>
           </div>
