@@ -1,6 +1,8 @@
 <x-app-layout title="Profil Page">
     <div class="col-span-4 md:col-span-3 mt-10 mx-auto pt-10 pb-40 w-full" style="max-width:1440px">
-        <img class="w-full my-2 rounded-lg" src="assets/tari.jpg" alt="thumbnail">
+        <div class="flex justify-center">
+            <img class="w-1/2 my-2 rounded-lg" src="assets/tari.jpg" alt="thumbnail">
+        </div>
         <h1 class="text-6xl font-bold text-center text-gray-800">
             Profil Kabupaten Minahasa
         </h1>
