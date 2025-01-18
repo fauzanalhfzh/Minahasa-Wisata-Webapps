@@ -20,22 +20,6 @@
                 </x-nav-link>
             </ul>
           </div>
-
-          <div class="flex flex-col gap-5">
-            <h4 class="text-[18px] font-[700] whitespace-nowrap">Other Pages</h4>
-            <ul class="text-[14px] font-[400] flex flex-col gap-4 text-gray-30">
-                <a href="/" >
-                  Privacy & Policy
-                </a>
-                <a href="/" >
-                  Terms of use
-                </a>
-                <a href="/" >
-                  Disclaimer
-                </a>
-            </ul>
-          </div>
-
           <div class="flex flex-col gap-5">
             <h4 class="text-[18px] font-[700] whitespace-nowrap">Contact Us</h4>
             <ul class="text-[14px] font-[400] flex flex-col gap-4 text-gray-30">

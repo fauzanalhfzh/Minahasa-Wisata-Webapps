@@ -1,7 +1,7 @@
 <x-app-layout title="Profil Page">
     <div class="col-span-4 md:col-span-3 mt-10 mx-auto pt-10 pb-40 w-full" style="max-width:1440px">
         <div class="flex justify-center">
-            <img class="w-1/2 my-2 rounded-lg" src="assets/tari.jpg" alt="thumbnail">
+            <img class="my-2 rounded-lg" src="assets/beach.jpg" width="700" alt="thumbnail">
         </div>
         <h1 class="text-6xl font-bold text-center text-gray-800">
             Profil Kabupaten Minahasa
@@ -136,6 +136,18 @@
                 Tondano. Dataran tersebut dijumpai dalam wilayah Tondano, Remboken, Tompaso, Langowan, dan Kakas. Lereng
                 beragam dari datar hingga sangat curam. Lereng-lereng yang sangat curam dijumpai didalam wilayah Kecamatan
                 Kombi, Kecamatan Kakas, dan Kecamatan Langowan Selatan.</p>
+                <!-- Google Maps Embed -->
+            <div class="flex justify-center mt-10">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31885.891003246894!2d124.84570001600548!3d1.3011238722250115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287713f76ef0a8d%3A0x403bfbca5448c40!2sMinahasa%2C%20Sulawesi%20Utara!5e0!3m2!1sen!2sid!4v1671293883453!5m2!1sen!2sid"
+                    width="1440"
+                    height="450"
+                    style="border:0; border-radius: 8px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
     </div>
 </x-app-layout>
